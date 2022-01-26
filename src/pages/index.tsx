@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { Auth } from "../components/Auth";
+import { Chat } from "../components/Chat";
 import { useSupabase } from "../hooks/useSupabase";
 
 const Home: NextPage = () => {
@@ -23,7 +24,7 @@ const Home: NextPage = () => {
 
       <main className="w-screen min-h-screen flex flex-col justify-center items-center">
         {!loggedIn && <Auth />}
-        {loggedIn && <h1>App</h1>}
+        {loggedIn && <Chat />}
       </main>
     </div>
   );
